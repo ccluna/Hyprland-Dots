@@ -34,8 +34,8 @@ window#waybar {
 	padding: 0px 5px;
 	border-radius: 15px;
 	border: 0px;
-	color: #0F1419;
-	background: linear-gradient(45deg, #95E6CB, #59C2FF, #D2A6FF);
+	color: @color1;
+	background: linear-gradient(45deg, @color7, @color4, @color12);
 	opacity: 0.5;
 	transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -43,22 +43,26 @@ window#waybar {
 #taskbar button.active,
 #workspaces button.active {
 	padding: 0px 5px;
-	border-radius: 15px;
+	border-radius: 10px;
 	border: 0px;
-	color: #0F1419;
-	background: linear-gradient(45deg, #59C2FF, #D2A6FF);
+	color: @color1;
+	background: linear-gradient(@color7, @color4, @color12);
 	opacity: 1.0;
-	min-width: 40px;
+	min-width: 30px;
 	transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button:hover {
 	border-radius: 15px;
-	color: #0F1419;
-	background: linear-gradient(45deg, #59C2FF, #D2A6FF);
+	color: @color1;
+	background: linear-gradient(45deg, @color7, @color4, @color12);
 	opacity: 0.8;
 	transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 
+}
+
+#worspaces button.urgent {
+  color: #FF0000;
 }
 
 tooltip {
@@ -135,11 +139,12 @@ tooltip {
 
  
 #clock {
- color:#a3be8c;
+ color:@color13;
 }
 
-#backlight {
-    color: #ebcb8b;
+#backlight,
+#custom-backlight{
+    color: @color4;
 }
 
 #battery {
@@ -168,16 +173,19 @@ tooltip {
 }
 
 #cpu {
-    color: #a3be8c;
+    color: @color13;
 }
 
 #disk {
 	color: #94e2d5;
 }
 
-#custom-keyboard,
+#custom-keyboard {
+    color: @color8;
+}
+
 #memory {
-    color: #d3869b;
+    color: @color13;
 }
 
 #network.disabled {
@@ -193,7 +201,7 @@ tooltip {
 }
 
 #pulseaudio {
-    color: #04a5e5;
+    color: @cursor;
 }
 
 #pulseaudio.muted {
@@ -212,13 +220,13 @@ tooltip {
 #keyboard-state,
 #custom-hypridle,
 #idle_inhibitor {
-   color: #ebcb8b;
+   color: @color9;
 }
 
 /*-----Indicators----*/
 #custom-hypridle.notactive,
 #idle_inhibitor.activated {
-	color: #39FF14;
+	color: @color14;
 }
 
 #tray {
@@ -226,28 +234,28 @@ tooltip {
 
 #custom-swaync,
 #custom-menu {
-	color: yellow;
+	color: #FFFF00;
 	padding-left: 8px;
 }
+
+#custom-playerctl {
+	color: @color5;
+}
+
 #custom-power{
-    color: #eba0ac; 
+    color: #FF0000; 
 }
 
 #window{
     border-style: hidden; 
 }
 
-#custom-lock,    
-#bluetooth{
-	color:#d08770;
-}
-
 #custom-cava_mviz{
 	color: @color11;
 } 
-  
+
 #custom-weather{
-	color:#d08770;
+	color:@color14;
 }
 
 #backlight-slider slider,
